@@ -11,7 +11,7 @@ const robotsWins = doc.querySelector("#robotsWins");
 const playersWins = doc.querySelector("#playersWins");
 robotsWins.textContent = "🤖's wins: 0"
 playersWins.textContent = "player's wins: 0";
-let RPS = ["rock", "paper", "scissors"];
+const RPS = ["rock", "paper", "scissors"];
 let pChoice;
 let computerChoice;
 let playersWin = 0;
