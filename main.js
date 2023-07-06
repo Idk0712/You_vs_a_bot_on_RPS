@@ -60,7 +60,7 @@ function scissorsBtnClick() {
     }
     if(pChoice === "scissors" && computerChoice === "paper") {
         playersWin++;
-        playersWins.textContent = `player's wins: ${computersWins}`
+        playersWins.textContent = `player's wins: ${playersWin}`
         div.textContent = `You chose ${pChoice}, and the computer chose ${computerChoice}.\nYou won!`;
     }
     if(pChoice === "scissors" && computerChoice === "scissors") {
