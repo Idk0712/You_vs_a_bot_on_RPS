@@ -10,7 +10,7 @@ const div = doc.querySelector(".whoWonDiv");
 const robotsWins = doc.querySelector("#robotsWins");
 const playersWins = doc.querySelector("#playersWins");
 robotsWins.textContent = "🤖's wins: 0"
-playersWins.textContent = "Player's wins: 0";
+playersWins.textContent = "player's wins: 0";
 let RPS = ["rock", "paper", "scissors"];
 let pChoice;
 let computerChoice;
@@ -38,7 +38,7 @@ function paperBtnClick() {
     computerChoice = RPS[Math.floor(Math.random() * RPS.length)];
     if(pChoice === "paper" && computerChoice === "rock") {
         playersWin++;
-        playersWins.textContent = `Player's wins: ${playersWin}`;
+        playersWins.textContent = `player's wins: ${playersWin}`;
         div.textContent = `You chose ${pChoice}, and the computer chose ${computerChoice}.\nYou won!`;
     }
     if(pChoice === "paper" && computerChoice === "paper") {
