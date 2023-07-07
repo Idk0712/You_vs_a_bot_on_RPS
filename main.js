@@ -20,17 +20,17 @@ function rockBtnClick() {
     pChoice = RPS[0];
     computerChoice = RPS[Math.floor(Math.random() * RPS.length)];
     if(pChoice === RPS[0] && computerChoice === RPS[0]) {
-        div.textContent = `You chose ${pChoice}, and the computer chose ${computerChoice}.\nIt's a tie!`;
+        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
     }
     if(pChoice === RPS[0] && computerChoice === RPS[1]) {
         computersWins++;
         robotsWins.textContent = `🤖's wins: ${computersWins}`;
-        div.textContent = `You chose ${pChoice}, and the computer chose ${computerChoice}.\nThe computer won!`;
+        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
     }
     if(pChoice === RPS[0] && computerChoice === RPS[2]) {
         playersWin++;
         playersWins.textContent = `player's wins: ${playersWin}`;
-        div.textContent = `You chose ${pChoice}, and the computer chose ${computerChoice}.\nYou won!`;
+        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
     }
 };
 function paperBtnClick() {
@@ -39,15 +39,15 @@ function paperBtnClick() {
     if(pChoice === RPS[1] && computerChoice === RPS[0]) {
         playersWin++;
         playersWins.textContent = `player's wins: ${playersWin}`;
-        div.textContent = `You chose ${pChoice}, and the computer chose ${computerChoice}.\nYou won!`;
+        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
     }
     if(pChoice === RPS[1] && computerChoice === RPS[1]) {
-        div.textContent = `You chose ${pChoice}, and the computer chose ${computerChoice}.\nIt's a tie!`;
+        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
     }
     if(pChoice === RPS[1] && computerChoice === RPS[2]) {
         computersWins++;
         robotsWins.textContent = `🤖's wins: ${computersWins}`;
-        div.textContent = `You chose ${pChoice}, and the computer chose ${computerChoice}.\nThe computer won!`;
+        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
     }
 };
 function scissorsBtnClick() {
@@ -56,15 +56,15 @@ function scissorsBtnClick() {
     if(pChoice === RPS[2] && computerChoice === RPS[0]) {
         computersWins++;
         robotsWins.textContent = `🤖's wins: ${computersWins}`;
-        div.textContent = `You chose ${pChoice}, and the computer chose ${computerChoice}.\nThe computer won!`;
+        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
     }
     if(pChoice === RPS[2] && computerChoice === RPS[1]) {
         playersWin++;
         playersWins.textContent = `player's wins: ${playersWin}`
-        div.textContent = `You chose ${pChoice}, and the computer chose ${computerChoice}.\nYou won!`;
+        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
     }
     if(pChoice === RPS[2] && computerChoice === RPS[2]) {
-        div.textContent = `You chose ${pChoice}, and the computer chose ${computerChoice}.\nIt's a tie!`;
+        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
     }
 };
 function changeHue() {
