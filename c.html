@@ -17,7 +17,6 @@
             border: none;
             cursor: pointer;
             pointer-events: all;
-            background-color: white;
         }
         .whoWonDiv{
             font-size: 75px;
@@ -35,13 +34,13 @@
     <div style="text-align: center; position: relative; top: -75px; pointer-events: none;">
         <h1>Rock paper scissors you vs a bot(the bot is beatable)</h1>
         <h1>Press R to restart wins and games at 0</h1>
-        <h1 class="games_count"></h1>
+        <h1 class="games_count">Games: 0</h1>
         <h1 class="ties">Ties: 0</h1>
         <h1 class="Wins" id="robotsWins"></h1>
         <h1 class="Wins" id="playersWins"></h1>
-        <button onclick="rockBtnClick(RPS[0])">👊</button>
-        <button onclick="paperBtnClick(RPS[1])">🖐️</button>
-        <button onclick="scissorsBtnClick(RPS[2])">✌️</button>
+        <button onclick="playGame(RPS[0]);">👊</button>
+        <button onclick="playGame(RPS[1]);">🖐️</button>
+        <button onclick="playGame(RPS[2]);">✌️</button>
         <div class="whoWonDiv"></div>
     </div>
     <script src="main.js"></script>
