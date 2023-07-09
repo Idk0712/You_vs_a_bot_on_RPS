@@ -22,6 +22,14 @@ let computerChoice;
 doc.addEventListener("keydown", e => {
     if(e.key === "r") {
         localStorage.removeItem("update");
+        updateGame.playersWin = 0;
+        updateGame.computerWins = 0;
+        updateGame.gamesCount = 0;
+        updateGame.ties = 0;
+        robotsWins.textContent = `🤖's wins: ${updateGame.computersWins}`;
+        playersWins.textContent = `player's wins: ${updateGame.playersWin}`;
+        games_count.textContent = `Games: ${updateGame.gamesCount}`;
+        tiesDiv.textContent = `Ties: ${updateGame.ties}`;
     }
 });
 tiesDiv.textContent = `Ties: ${updateGame.ties}`;
