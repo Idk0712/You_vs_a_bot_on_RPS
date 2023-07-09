@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock paper scissors</title>
     <style>
         *{
             font-family: 'Hammersmith One';
@@ -17,6 +17,7 @@
             border: none;
             cursor: pointer;
             pointer-events: all;
+            background-color: white;
         }
         .whoWonDiv{
             font-size: 75px;
@@ -30,14 +31,17 @@
     </style>
 </head>
 <body style="margin: 0; background-color: black;">
-    <a href="https://idk0712.github.io/UnbeatableComputerRPS/main.html" title="Unbeatable computer">Go here for more</a>
+    <a href="https://idk0712.github.io/UnbeatableComputerRPS/main.html" title="Unbeatable computer" target="_blank">Go here for more</a>
     <div style="text-align: center; position: relative; top: -75px; pointer-events: none;">
         <h1>Rock paper scissors you vs a bot(the bot is beatable)</h1>
+        <h1>Press R to restart wins and games at 0</h1>
+        <h1 class="games_count"></h1>
+        <h1 class="ties">Ties: 0</h1>
         <h1 class="Wins" id="robotsWins"></h1>
         <h1 class="Wins" id="playersWins"></h1>
-        <button onclick="rockBtnClick()">👊</button>
-        <button onclick="paperBtnClick()">🖐️</button>
-        <button onclick="scissorsBtnClick()">✌️</button>
+        <button onclick="rockBtnClick(RPS[0])">👊</button>
+        <button onclick="paperBtnClick(RPS[1])">🖐️</button>
+        <button onclick="scissorsBtnClick(RPS[2])">✌️</button>
         <div class="whoWonDiv"></div>
     </div>
     <script src="main.js"></script>
