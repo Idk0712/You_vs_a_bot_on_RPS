@@ -20,7 +20,7 @@ let updateGame = JSON.parse(localStorage.getItem("update")) || {
 };
 let computerChoice;
 doc.addEventListener("keydown", e => {
-    if(e.key === "r" || e.key === "R") {
+    if(e.key === "r") {
         localStorage.removeItem("update");
     }
 });
@@ -35,50 +35,49 @@ function playGame(pChoice){
     if(pChoice === RPS[2] && computerChoice === RPS[0]) {
         updateGame.computersWins++;
         robotsWins.textContent = `🤖's wins: ${updateGame.computersWins}`;
-        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
+        div.textContent = `You: ${pChoice} ${computerChoice} :🤖`;
     }
     if(pChoice === RPS[2] && computerChoice === RPS[1]) {
         updateGame.playersWin++;
         playersWins.textContent = `player's wins: ${updateGame.playersWin}`
-        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
+        div.textContent = `You: ${pChoice} ${computerChoice} :🤖`;
     }
     if(pChoice === RPS[2] && computerChoice === RPS[2]) {
         updateGame.ties++;
         tiesDiv.textContent = `Ties: ${updateGame.ties}`;
-        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
+        div.textContent = `You: ${pChoice} ${computerChoice} :🤖`;
     }
     if(pChoice === RPS[1] && computerChoice === RPS[0]) {
         updateGame.playersWin++;
         playersWins.textContent = `player's wins: ${updateGame.playersWin}`;
-        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
+        div.textContent = `You: ${pChoice} ${computerChoice} :🤖`;
     }
     if(pChoice === RPS[1] && computerChoice === RPS[1]) {
         updateGame.ties++;
         tiesDiv.textContent = `Ties: ${updateGame.ties}`;
-        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
+        div.textContent = `You: ${pChoice} ${computerChoice} :🤖`;
     }
     if(pChoice === RPS[1] && computerChoice === RPS[2]) {
         updateGame.computersWins++;
         robotsWins.textContent = `🤖's wins: ${updateGame.computersWins}`;
-        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
+        div.textContent = `You: ${pChoice} ${computerChoice} :🤖`;
     }
     if(pChoice === RPS[0] && computerChoice === RPS[0]) {
         updateGame.ties++;
         tiesDiv.textContent = `Ties: ${updateGame.ties}`;
-        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
+        div.textContent = `You: ${pChoice} ${computerChoice} :🤖`;
     }
     if(pChoice === RPS[0] && computerChoice === RPS[1]) {
         updateGame.computersWins++;
         robotsWins.textContent = `🤖's wins: ${updateGame.computersWins}`;
-        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
+        div.textContent = `You: ${pChoice} ${computerChoice} :🤖`;
     }
     if(pChoice === RPS[0] && computerChoice === RPS[2]) {
         updateGame.playersWin++;
         playersWins.textContent = `player's wins: ${updateGame.playersWin}`;
-        div.textContent = `You: ${pChoice}, 🤖: ${computerChoice}`;
+        div.textContent = `You: ${pChoice} ${computerChoice} :🤖`;
     }
     localStorage.setItem("update", JSON.stringify(updateGame));
-    log(updateGame);
 };
 function changeHue() {
     hue+=Math.random() * 3;
