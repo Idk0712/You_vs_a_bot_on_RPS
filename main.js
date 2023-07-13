@@ -1,4 +1,7 @@
 const log = console.log;
+const warn = console.warn;
+const clear = console.clear;
+const error = console.error;
 const doc = document;
 const body = doc.body;
 const head = doc.head;
@@ -6,6 +9,8 @@ let hue = 0;
 doc.addEventListener("keydown", e => {
     if(e.key == "F12") e.preventDefault();
 });
+warn("Do not copy paste anything in there");
+error("I repeat, I said do not copy paste anything in here");
 const div = doc.querySelector(".whoWonDiv");
 const robotsWins = doc.querySelector("#robotsWins");
 const playersWins = doc.querySelector("#playersWins");
