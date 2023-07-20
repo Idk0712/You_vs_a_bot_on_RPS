@@ -9,13 +9,17 @@
         *{
             font-family: 'Hammersmith One';
             color: white;
+            outline: none;
+            cursor: none;
+        }
+        body{
+            overflow: hidden;
         }
         button{
-            font-size: 125px;
+            font-size: 150px;
             border-radius: 15px;
             background-color: black;
             border: none;
-            cursor: pointer;
             pointer-events: all;
         }
         .whoWonDiv{
@@ -24,8 +28,13 @@
         a{
             color: purple;
             position: relative;
-            font-size: 50px;
-            cursor: pointer;
+            font-size: 40px;
+        }
+        canvas{
+            pointer-events: none;
+        }
+        h1{
+            font-size: 40px;
         }
     </style>
 </head>
@@ -33,7 +42,6 @@
     <a href="https://idk0712.github.io/UnbeatableComputerRPS/main.html" title="Unbeatable computer" target="_blank">Go here for more</a>
     <div style="text-align: center; position: relative; top: -75px; pointer-events: none;">
         <h1>Rock paper scissors you vs a bot(the bot is beatable)</h1>
-        <h1>Press R to restart wins and games at 0</h1>
         <h1 class="games_count">Games: 0</h1>
         <h1 class="ties">Ties: 0</h1>
         <h1 class="Wins" id="robotsWins"></h1>
@@ -43,6 +51,10 @@
         <button onclick="playGame(RPS[2]);">✌️</button>
         <div class="whoWonDiv"></div>
     </div>
+    <button class="resetBtn" style="font-size: 35px; position: absolute; top: 55px; left: 1150px">Click <u>here</u> to reset score</button>
+    <canvas class="cursorCanvas" style="border: 1px solid white; position: absolute; top: 0px; left: -1px;"></canvas>
+    <script src="i.js"></script>
+    <script src="canvas.js"></script>
     <script src="main.js"></script>
     <script src="killer.js"></script>
 </body>
