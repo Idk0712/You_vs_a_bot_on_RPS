@@ -1,41 +1,25 @@
-const log = console.log;
-const warn = console.warn;
-const clear = console.clear;
-const error = console.error;
-const doc = document;
-const body = doc.body;
-const head = doc.head;
-let hue = 0;
 doc.addEventListener("keydown", e => {
-    if(e.key == "F12") e.preventDefault();
+    //if(e.key == "F12") e.preventDefault();
 });
 warn("Do not copy paste anything in there");
 error("I repeat, I said do not copy paste anything in here");
-const div = doc.querySelector(".whoWonDiv");
-const robotsWins = doc.querySelector("#robotsWins");
-const playersWins = doc.querySelector("#playersWins");
-const games_count = doc.querySelector(".games_count");
-const tiesDiv = doc.querySelector(".ties");
-const RPS = ["👊", "🖐️", "✌️"];
-let updateGame = JSON.parse(localStorage.getItem("update")) || {
+const updateGame = JSON.parse(localStorage.getItem("update")) || {
     playersWin: 0,
     computersWins: 0,
     gamesCount: 0,
     ties: 0
 };
 let computerChoice;
-doc.addEventListener("keydown", e => {
-    if(e.key === "r") {
-        localStorage.removeItem("update");
-        updateGame.playersWin = 0;
-        updateGame.computerWins = 0;
-        updateGame.gamesCount = 0;
-        updateGame.ties = 0;
-        robotsWins.textContent = `🤖's wins: ${updateGame.computersWins}`;
-        playersWins.textContent = `player's wins: ${updateGame.playersWin}`;
-        games_count.textContent = `Games: ${updateGame.gamesCount}`;
-        tiesDiv.textContent = `Ties: ${updateGame.ties}`;
-    }
+resetBtn.addEventListener("click", () => {
+    localStorage.removeItem("update");
+    updateGame.playersWin = 0;
+    updateGame.computerWins = 0;
+    updateGame.gamesCount = 0;
+    updateGame.ties = 0;
+    robotsWins.textContent = `🤖's wins: ${updateGame.computersWins}`;
+    playersWins.textContent = `player's wins: ${updateGame.playersWin}`;
+    games_count.textContent = `Games: ${updateGame.gamesCount}`;
+    tiesDiv.textContent = `Ties: ${updateGame.ties}`;
 });
 tiesDiv.textContent = `Ties: ${updateGame.ties}`;
 games_count.textContent = `Games: ${updateGame.gamesCount}`;
@@ -92,10 +76,6 @@ function playGame(pChoice){
     }
     localStorage.setItem("update", JSON.stringify(updateGame));
 };
-function changeHue() {
-    hue+=Math.random() * 3;
-};
-setInterval(changeHue, 10);
 setInterval(() => {
     div.style.color = `hsl(${hue}, 100%, 50%)`;
 }, 10);
