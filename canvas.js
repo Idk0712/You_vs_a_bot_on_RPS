@@ -1,12 +1,15 @@
 /** @type {HTMLCanvasElement} */
 const canvas = query(".cursorCanvas"),
-c = canvas.getContext("2d");
+    c = canvas.getContext("2d");
 canvas.width = innerWidth;
+
 canvas.height = innerHeight;
+
 window.addEventListener("resize", () => {
     canvas.width = innerWidth;
     canvas.height = innerHeight;
 });
+
 class Circle{
     constructor(x, y, radius){
         this.x = x;
