@@ -1,5 +1,5 @@
 doc.addEventListener("keydown", e => {
-    //if(e.key == "F12") e.preventDefault();
+    if(e.key == "F12") e.preventDefault();
 });
 warn("Do not copy paste anything in there");
 error("I repeat, I said do not copy paste anything in here");
