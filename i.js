@@ -1,3 +1,4 @@
+//
 const {clear, log, dir, error, warn} = console;
 const {random, max, min, floor, round, ceil, PI} = Math;
 const {parse, stringify} = JSON;
